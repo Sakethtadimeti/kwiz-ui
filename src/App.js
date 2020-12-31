@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ThemeProvider } from "@emotion/react";
+import { defaultTheme } from "./themes";
+import Intro from "./features/intro/intro-component";
+import { Button } from "rebass";
 
 function App() {
+  console.log(defaultTheme);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={defaultTheme}>
+        <Intro />
+        {/* <Text fontSize={[3, 4, 5]} fontWeight="bold" color="primary"></Text> */}
+      </ThemeProvider>
     </div>
   );
 }

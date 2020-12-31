@@ -1,0 +1,31 @@
+.intro {
+}
+
+.kwiz-intro-page {
+  padding: 1rem 3rem;
+  .left-intro {
+    width: 60%;
+    .title {
+      font-family: "Bungee Outline", cursive;
+      margin: 0;
+      color: cornflowerblue;
+      font-size: 10rem;
+    }
+    .intro-text {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 2rem;
+    }
+  }
+  .right-intro {
+    width: 40%;
+    display: flex;
+    .get-started-btn {
+      background-color: cornflowerblue;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1px;
+      outline: red;
+      //   width: 10rem;
+    }
+  }
+}
