@@ -1,8 +1,10 @@
 import React from "react";
 import { Button } from "rebass";
 import "./intro-component.scss";
+import { withRouter } from "react-router-dom";
 
-const IntroComponent = () => {
+const IntroComponent = (props) => {
+  const { history } = props;
   return (
     <div className="kwiz-intro-page">
       <div className="left-intro">
@@ -20,7 +22,12 @@ const IntroComponent = () => {
         </div>
       </div>
       <div className="right-intro">
-        <Button variant="outline" className="get-started-btn" mr={2}>
+        <Button
+          variant="outline"
+          className="get-started-btn"
+          mr={2}
+          onClick={() => history.push("/dashboard")}
+        >
           Let's Get Started
         </Button>
       </div>
@@ -28,4 +35,4 @@ const IntroComponent = () => {
   );
 };
 
-export default IntroComponent;
+export default withRouter(IntroComponent);
