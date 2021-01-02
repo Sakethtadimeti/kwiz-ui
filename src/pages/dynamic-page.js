@@ -1,6 +1,6 @@
 import React from "react";
 
-import DynamicImport from "../common/dynamic-import";
+import DynamicImport from "../common/components/dynamic-import";
 const DynamicPage = (props) => (
   <DynamicImport
     load={() =>
